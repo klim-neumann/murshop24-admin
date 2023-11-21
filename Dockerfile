@@ -10,4 +10,4 @@ COPY murshop24_admin murshop24_admin
 
 EXPOSE 8000
 
-CMD [ "gunicorn", "murshop24_admin:app" ]
+CMD [ "gunicorn", "murshop24_admin:app", "--bind", "0.0.0.0" ]
