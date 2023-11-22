@@ -28,6 +28,11 @@ class TgReviewsChannelView(flask_admin_sqla.ModelView):
     form_columns = ("invite_link",)
 
 
+class TgCustomerGroupView(flask_admin_sqla.ModelView):
+    column_list = ("invite_link",)
+    form_columns = ("invite_link",)
+
+
 class TgBotView(flask_admin_sqla.ModelView):
     column_labels = {
         "tg_username": "Username",

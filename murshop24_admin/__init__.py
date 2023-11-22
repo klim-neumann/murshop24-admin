@@ -41,6 +41,12 @@ def _create_admin(
             name="Reviews Channel",
             category=ModelViewCategory.TELEGRAM,
         ),
+        _views.TgCustomerGroupView(
+            models.TgCustomerGroup,
+            session,
+            name="Customer Group",
+            category=ModelViewCategory.TELEGRAM,
+        ),
         _views.TgBotView(
             models.TgBot, session, name="Bot", category=ModelViewCategory.TELEGRAM
         ),
