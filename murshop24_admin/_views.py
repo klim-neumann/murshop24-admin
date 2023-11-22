@@ -33,9 +33,10 @@ class TgBotView(flask_admin_sqla.ModelView):
         "tg_username": "Username",
         "tg_operator": "Operator",
         "tg_reviews_channel": "Reviews Channel",
+        "tg_customer_group": "Customer Group",
     }
-    column_list = ("tg_username", "is_running", "tg_operator", "tg_reviews_channel")
-    form_columns = ("token", "tg_operator", "tg_reviews_channel")
+    column_list = ("tg_username", "is_running", "tg_operator", "tg_reviews_channel", "tg_customer_group")
+    form_columns = ("token", "tg_operator", "tg_reviews_channel", "tg_customer_group")
 
     def on_model_change(
         self, form: flask_admin_form.BaseForm, model: models.TgBot, is_created: bool
